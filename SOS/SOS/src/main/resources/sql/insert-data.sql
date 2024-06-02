@@ -7,3 +7,8 @@ INSERT INTO Plan_Zajec (idPlanu, dataZajec, godzinaRozpoczecia, godzinaZakonczen
 (1, '2024-06-02', '08:00:00', '09:30:00', 1),
 (2, '2024-06-03', '10:00:00', '11:30:00', 2),
 (3, '2024-06-04', '12:00:00', '13:30:00', 3);
+
+INSERT INTO Wykladowca (idWykladowcy, imie, nazwisko, tytulNaukowy, email) VALUES
+(1, 'Jan', 'Kowalski', 'Dr', 'jan.kowalski@horyz.edu'),
+(2, 'Anna', 'Nowak', 'Prof', 'anna.nowak@horyz.edu'),
+(3, 'Piotr', 'Zieliński', 'Dr', 'piotr.zielinski@horyz.edu');
