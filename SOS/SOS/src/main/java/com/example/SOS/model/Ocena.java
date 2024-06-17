@@ -26,4 +26,52 @@ public class Ocena {
     @Column(name = "data_wpisu")
     private LocalDateTime dataWpisu;
 
+
+    public int getIdOceny() {
+        return idOceny;
+    }
+
+    public void setIdOceny(int idOceny) {
+        this.idOceny = idOceny;
+    }
+
+    public int getIdStudenta() {
+        return idStudenta;
+    }
+
+    public void setIdStudenta(int idStudenta) {
+        this.idStudenta = idStudenta;
+    }
+
+    public int getIdPrzedmiotu() {
+        return idPrzedmiotu;
+    }
+
+    public void setIdPrzedmiotu(int idPrzedmiotu) {
+        this.idPrzedmiotu = idPrzedmiotu;
+    }
+
+    public double getOcena() {
+        return ocena;
+    }
+
+    public void setOcena(double ocena) {
+        this.ocena = ocena;
+    }
+
+    public int getTermin() {
+        return termin;
+    }
+
+    public void setTermin(int termin) {
+        this.termin = termin;
+    }
+
+    public LocalDateTime getDataWpisu() {
+        return dataWpisu;
+    }
+
+    public void setDataWpisu(LocalDateTime dataWpisu) {
+        this.dataWpisu = dataWpisu;
+    }
 }
