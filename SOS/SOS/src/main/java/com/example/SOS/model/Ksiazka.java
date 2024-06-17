@@ -22,4 +22,36 @@ public class Ksiazka {
     @Column(name = "rok_wydania")
     private int rokWydania;
 
+
+    public int getIdKsiazki() {
+        return idKsiazki;
+    }
+
+    public void setIdKsiazki(int idKsiazki) {
+        this.idKsiazki = idKsiazki;
+    }
+
+    public String getTytul() {
+        return tytul;
+    }
+
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getRokWydania() {
+        return rokWydania;
+    }
+
+    public void setRokWydania(int rokWydania) {
+        this.rokWydania = rokWydania;
+    }
 }
