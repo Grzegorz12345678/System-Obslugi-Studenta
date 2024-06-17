@@ -17,7 +17,7 @@ public class Platnosci {
     private int idPlatnosci;
     @Column(name = "id_studenta")
     private int idStudenta;
-    @Column(name = "kwota_Platnosci")
+    @Column(name = "kwota_platnosci")
     private double kwotaPlatnosci; // można dać BigDecimal
     @Column(name = "data_platnosci")
     private LocalDateTime dataPlatnosci;
