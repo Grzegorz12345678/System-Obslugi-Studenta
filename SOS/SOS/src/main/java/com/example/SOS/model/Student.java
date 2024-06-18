@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Table(name = "Student")
 public class Student {
 
-
     @Id
     @GeneratedValue
     @Column(name = "id_studenta")
@@ -54,4 +53,5 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
