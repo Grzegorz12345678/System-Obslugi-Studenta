@@ -27,4 +27,60 @@ public class Zajecia {
     @Column(name = "data_zajec")
     private LocalDateTime dataZajec;
 
+
+    public int getIdZajec() {
+        return idZajec;
+    }
+
+    public void setIdZajec(int idZajec) {
+        this.idZajec = idZajec;
+    }
+
+    public int getIdPrzedmiotu() {
+        return idPrzedmiotu;
+    }
+
+    public void setIdPrzedmiotu(int idPrzedmiotu) {
+        this.idPrzedmiotu = idPrzedmiotu;
+    }
+
+    public int getIdWykladowcy() {
+        return idWykladowcy;
+    }
+
+    public void setIdWykladowcy(int idWykladowcy) {
+        this.idWykladowcy = idWykladowcy;
+    }
+
+    public int getIdSali() {
+        return idSali;
+    }
+
+    public void setIdSali(int idSali) {
+        this.idSali = idSali;
+    }
+
+    public String getFormaZajec() {
+        return formaZajec;
+    }
+
+    public void setFormaZajec(String formaZajec) {
+        this.formaZajec = formaZajec;
+    }
+
+    public String getStatusZajec() {
+        return statusZajec;
+    }
+
+    public void setStatusZajec(String statusZajec) {
+        this.statusZajec = statusZajec;
+    }
+
+    public LocalDateTime getDataZajec() {
+        return dataZajec;
+    }
+
+    public void setDataZajec(LocalDateTime dataZajec) {
+        this.dataZajec = dataZajec;
+    }
 }
