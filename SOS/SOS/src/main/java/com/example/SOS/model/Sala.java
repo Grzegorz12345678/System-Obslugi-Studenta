@@ -20,4 +20,28 @@ public class Sala {
     @Column(name = "liczba_miejsc")
     private int liczbaMiejsc;
 
+
+    public int getIdSali() {
+        return idSali;
+    }
+
+    public void setIdSali(int idSali) {
+        this.idSali = idSali;
+    }
+
+    public String getNazwa() {
+        return nazwa;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
+    public int getLiczbaMiejsc() {
+        return liczbaMiejsc;
+    }
+
+    public void setLiczbaMiejsc(int liczbaMiejsc) {
+        this.liczbaMiejsc = liczbaMiejsc;
+    }
 }
