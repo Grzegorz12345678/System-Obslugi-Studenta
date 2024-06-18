@@ -26,4 +26,51 @@ public class Zapis {
     @Column(name = "status")
     private String status;
 
+    public int getIdZapisu() {
+        return idZapisu;
+    }
+
+    public void setIdZapisu(int idZapisu) {
+        this.idZapisu = idZapisu;
+    }
+
+    public int getIdStudenta() {
+        return idStudenta;
+    }
+
+    public void setIdStudenta(int idStudenta) {
+        this.idStudenta = idStudenta;
+    }
+
+    public int getIdZajec() {
+        return idZajec;
+    }
+
+    public void setIdZajec(int idZajec) {
+        this.idZajec = idZajec;
+    }
+
+    public LocalDateTime getDataZapisu() {
+        return dataZapisu;
+    }
+
+    public void setDataZapisu(LocalDateTime dataZapisu) {
+        this.dataZapisu = dataZapisu;
+    }
+
+    public String getTypZapisu() {
+        return typZapisu;
+    }
+
+    public void setTypZapisu(String typZapisu) {
+        this.typZapisu = typZapisu;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
