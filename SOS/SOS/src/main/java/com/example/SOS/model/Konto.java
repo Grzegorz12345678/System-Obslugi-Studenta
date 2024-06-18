@@ -26,5 +26,51 @@ public class Konto {
     private boolean aktywne;
 
 
+    public int getIdKonta() {
+        return idKonta;
+    }
 
+    public void setIdKonta(int idKonta) {
+        this.idKonta = idKonta;
+    }
+
+    public int getIdStudenta() {
+        return idStudenta;
+    }
+
+    public void setIdStudenta(int idStudenta) {
+        this.idStudenta = idStudenta;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getHaslo() {
+        return haslo;
+    }
+
+    public void setHaslo(String haslo) {
+        this.haslo = haslo;
+    }
+
+    public boolean isBlokada() {
+        return blokada;
+    }
+
+    public void setBlokada(boolean blokada) {
+        this.blokada = blokada;
+    }
+
+    public boolean isAktywne() {
+        return aktywne;
+    }
+
+    public void setAktywne(boolean aktywne) {
+        this.aktywne = aktywne;
+    }
 }
