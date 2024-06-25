@@ -2,27 +2,40 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "Konta")
+@Table(name = "Konta", uniqueConstraints = @UniqueConstraint(columnNames = "login"))
 public class Konto {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_konta")
     private int idKonta;
-    @Column(name = "id_studenta")
+
+    @NotNull
+    @Column(name = "id_studenta", nullable = false)
     private int idStudenta;
-    @Column(name = "login")
+
+    @NotNull
+    @Size(max = 50)
+    @Column(name = "login", nullable = false, unique = true, length = 50)
     private String login;
-    @Column(name = "haslo")
+
+    @NotNull
+    @Size(max = 100)
+    @Column(name = "haslo", nullable = false, length = 100)
     private String haslo;
-    @Column(name = "blokada")
+
+    @Column(name = "blokada", nullable = false)
     private boolean blokada;
-    @Column(name = "aktywne")
+
+    @Column(name = "aktywne", nullable = false)
     private boolean aktywne;
 
 
