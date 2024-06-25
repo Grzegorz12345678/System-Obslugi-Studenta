@@ -3,24 +3,35 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "Ksiazki")
 public class Ksiazka {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ksiazki")
     private int idKsiazki;
-    @Column(name = "tytul")
+
+    @NotNull
+    @Size(max = 100)
+    @Column(name = "tytul", nullable = false, length = 100)
     private String tytul;
-    @Column(name = "autor")
+
+    @NotNull
+    @Size(max = 100)
+    @Column(name = "autor", nullable = false, length = 100)
     private String autor;
-    @Column(name = "rok_wydania")
+
+    @NotNull
+    @Column(name = "rok_wydania", nullable = false)
     private int rokWydania;
+
 
 
     public int getIdKsiazki() {

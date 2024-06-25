@@ -3,6 +3,7 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,16 +12,18 @@ import javax.persistence.Table;
 public class Student {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_studenta")
     private int idStudenta;
-    @Column(name = "imie")
-    private String imie;
-    @Column(name = "nazwisko")
-    private String nazwisko;
-    @Column(name = "email")
-    private String email;
 
+    @Column(name = "imie", length = 50)
+    private String imie;
+
+    @Column(name = "nazwisko", length = 50)
+    private String nazwisko;
+
+    @Column(name = "email", length = 100, unique = true)
+    private String email;
 
     public int getIdStudenta() {
         return idStudenta;

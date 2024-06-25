@@ -1,23 +1,20 @@
 package com.example.SOS.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Sale")
 public class Sala {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_sali")
     private int idSali;
-    @Column(name = "nazwa")
+
+    @Column(name = "nazwa", nullable = false, length = 100, unique = true)
     private String nazwa;
-    @Column(name = "liczba_miejsc")
+
+    @Column(name = "liczba_miejsc", nullable = false)
     private int liczbaMiejsc;
 
 

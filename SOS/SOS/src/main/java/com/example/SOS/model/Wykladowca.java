@@ -3,27 +3,30 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Wykladowcy")
 public class Wykladowca {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_wykladowcy")
     private int idWykladowcy;
-    @Column(name = "imie")
-    private String imie;
-    @Column(name = "nazwisko")
-    private String nazwisko;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "tytul_naukowy")
-    private String tytulNaukowy;
 
+    @Column(name = "imie", length = 50)
+    private String imie;
+
+    @Column(name = "nazwisko", length = 50)
+    private String nazwisko;
+
+    @Column(name = "email", length = 100, unique = true)
+    private String email;
+
+    @Column(name = "tytul_naukowy", length = 50)
+    private String tytulNaukowy;
 
     public int getIdWykladowcy() {
         return idWykladowcy;
@@ -64,4 +67,5 @@ public class Wykladowca {
     public void setTytulNaukowy(String tytulNaukowy) {
         this.tytulNaukowy = tytulNaukowy;
     }
+
 }

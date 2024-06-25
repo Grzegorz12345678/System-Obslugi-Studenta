@@ -1,10 +1,7 @@
 package com.example.SOS.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,15 +9,19 @@ import java.time.LocalDateTime;
 public class Platnosci {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_platnosci")
     private int idPlatnosci;
-    @Column(name = "id_studenta")
+
+    @Column(name = "id_studenta", nullable = false)
     private int idStudenta;
-    @Column(name = "kwota_platnosci")
-    private double kwotaPlatnosci; // można dać BigDecimal
-    @Column(name = "data_platnosci")
+
+    @Column(name = "kwota_platnosci", nullable = false)
+    private BigDecimal kwotaPlatnosci;
+
+    @Column(name = "data_platnosci", nullable = false)
     private LocalDateTime dataPlatnosci;
+
 
     public int getIdPlatnosci() {
         return idPlatnosci;
@@ -38,11 +39,11 @@ public class Platnosci {
         this.idStudenta = idStudenta;
     }
 
-    public double getKwotaPlatnosci() {
+    public BigDecimal getKwotaPlatnosci() {
         return kwotaPlatnosci;
     }
 
-    public void setKwotaPlatnosci(double kwotaPlatnosci) {
+    public void setKwotaPlatnosci(BigDecimal kwotaPlatnosci) {
         this.kwotaPlatnosci = kwotaPlatnosci;
     }
 

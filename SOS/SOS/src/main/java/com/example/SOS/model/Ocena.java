@@ -3,8 +3,10 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,18 +14,28 @@ import java.time.LocalDateTime;
 public class Ocena {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_oceny")
     private int idOceny;
-    @Column(name = "id_studenta")
+
+    @NotNull
+    @Column(name = "id_studenta", nullable = false)
     private int idStudenta;
-    @Column(name = "id_przedmiotu")
+
+    @NotNull
+    @Column(name = "id_przedmiotu", nullable = false)
     private int idPrzedmiotu;
-    @Column(name = "ocena")
+
+    @NotNull
+    @Column(name = "ocena", nullable = false)
     private double ocena;
-    @Column(name = "termin")
+
+    @NotNull
+    @Column(name = "termin", nullable = false)
     private int termin;
-    @Column(name = "data_wpisu")
+
+    @NotNull
+    @Column(name = "data_wpisu", nullable = false)
     private LocalDateTime dataWpisu;
 
 
