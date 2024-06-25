@@ -3,8 +3,10 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,20 +14,28 @@ import java.time.LocalDateTime;
 public class Wypozyczenie {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_wypozyczenia")
     private int idWypozyczenia;
+
+    @NotNull
     @Column(name = "id_studenta")
     private int idStudenta;
+
+    @NotNull
     @Column(name = "id_ksiazki")
     private int idKsiazki;
+
+    @NotNull
     @Column(name = "data_wypozyczenia")
     private LocalDateTime dataWypozyczenia;
+
     @Column(name = "data_zwrotu")
     private LocalDateTime dataZwrotu;
-    @Column(name = "status_wypozyczenia")
-    private String statusWypozyczenia;
 
+    @NotNull
+    @Column(name = "status_wypozyczenia", length = 10)
+    private String statusWypozyczenia;
 
     public int getIdWypozyczenia() {
         return idWypozyczenia;

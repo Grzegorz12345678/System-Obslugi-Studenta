@@ -3,6 +3,7 @@ package com.example.SOS.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
@@ -12,18 +13,23 @@ import java.time.LocalDateTime;
 public class Zapis {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_zapisu")
     private int idZapisu;
-    @Column(name = "id_studenta")
+
+    @Column(name = "id_studenta", nullable = false)
     private int idStudenta;
-    @Column(name = "id_zajec")
+
+    @Column(name = "id_zajec", nullable = false)
     private int idZajec;
+
     @Column(name = "data_zapisu")
     private LocalDateTime dataZapisu;
-    @Column(name = "typ_zapisu")
+
+    @Column(name = "typ_zapisu", length = 50)
     private String typZapisu;
-    @Column(name = "status")
+
+    @Column(name = "status", length = 20)
     private String status;
 
     public int getIdZapisu() {

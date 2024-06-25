@@ -1,7 +1,9 @@
 package com.example.SOS.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
@@ -11,22 +13,27 @@ import java.time.LocalDateTime;
 public class Zajecia {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_zajec")
     private int idZajec;
-    @Column(name = "id_przedmiotu")
+
+    @Column(name = "id_przedmiotu", nullable = false)
     private int idPrzedmiotu;
-    @Column(name = "id_wykladowcy")
+
+    @Column(name = "id_wykladowcy", nullable = false)
     private int idWykladowcy;
-    @Column(name = "id_sali")
+
+    @Column(name = "id_sali", nullable = false)
     private int idSali;
-    @Column(name = "forma_zajec")
+
+    @Column(name = "forma_zajec", length = 50)
     private String formaZajec;
-    @Column(name = "status_zajec")
+
+    @Column(name = "status_zajec", length = 20)
     private String statusZajec;
+
     @Column(name = "data_zajec")
     private LocalDateTime dataZajec;
-
 
     public int getIdZajec() {
         return idZajec;
