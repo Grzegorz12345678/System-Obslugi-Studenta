@@ -1,4 +1,4 @@
-package com.example.SOS.model;
+package pl.wwsis.sos.model;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.example.SOS.model;
+package pl.wwsis.sos.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,13 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Student")
-public class Student {
+@Table(name = "Wykladowcy")
+public class Wykladowca {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_studenta")
-    private int idStudenta;
+    @Column(name = "id_wykladowcy")
+    private int idWykladowcy;
 
     @Column(name = "imie", length = 50)
     private String imie;
@@ -25,12 +25,15 @@ public class Student {
     @Column(name = "email", length = 100, unique = true)
     private String email;
 
-    public int getIdStudenta() {
-        return idStudenta;
+    @Column(name = "tytul_naukowy", length = 50)
+    private String tytulNaukowy;
+
+    public int getIdWykladowcy() {
+        return idWykladowcy;
     }
 
-    public void setIdStudenta(int idStudenta) {
-        this.idStudenta = idStudenta;
+    public void setIdWykladowcy(int idWykladowcy) {
+        this.idWykladowcy = idWykladowcy;
     }
 
     public String getImie() {
@@ -55,6 +58,14 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getTytulNaukowy() {
+        return tytulNaukowy;
+    }
+
+    public void setTytulNaukowy(String tytulNaukowy) {
+        this.tytulNaukowy = tytulNaukowy;
     }
 
 }
