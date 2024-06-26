@@ -1,4 +1,4 @@
-package pl.wwsis.sos;
+package pl.wwsis.SOS;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

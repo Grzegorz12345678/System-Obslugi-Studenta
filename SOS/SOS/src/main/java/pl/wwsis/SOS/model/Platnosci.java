@@ -1,4 +1,4 @@
-package pl.wwsis.sos.model;
+package pl.wwsis.SOS.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
