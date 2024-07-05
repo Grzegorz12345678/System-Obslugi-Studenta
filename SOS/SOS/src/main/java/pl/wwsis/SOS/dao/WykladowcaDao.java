@@ -6,4 +6,5 @@ public interface WykladowcaDao {
     void dodajOcene(Ocena ocena);
     void edytujOcene(Ocena ocena);
     void usunOcene(Ocena ocena);
+
 }
