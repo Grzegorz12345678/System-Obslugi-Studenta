@@ -31,3 +31,4 @@ public class WykladowcaDaoImpl implements WykladowcaDao {
         entityManager.remove(mergedOcena);
     }
 }
+
