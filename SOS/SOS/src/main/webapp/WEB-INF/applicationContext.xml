@@ -51,6 +51,7 @@
 
 
     <bean id="przedmiotDao" class="pl.wwsis.SOS.dao.impl.PrzedmiotDaoImpl"/>
+
     <bean id="studentDao" class="pl.wwsis.SOS.dao.impl.StudentDaoImpl"/>
     <bean id="wykladowcaDao" class="pl.wwsis.SOS.dao.impl.WykladowcaDaoImpl"/>
 
