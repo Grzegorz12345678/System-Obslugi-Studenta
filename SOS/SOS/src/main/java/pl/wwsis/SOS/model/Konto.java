@@ -38,7 +38,6 @@ public class Konto {
     @Column(name = "aktywne", nullable = false)
     private boolean aktywne;
 
-
     public int getIdKonta() {
         return idKonta;
     }
