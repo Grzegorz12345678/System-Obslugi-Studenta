@@ -49,6 +49,7 @@
     <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
+
     <bean id="przedmiotDao" class="pl.wwsis.SOS.dao.impl.PrzedmiotDaoImpl"/>
     <bean id="studentDao" class="pl.wwsis.SOS.dao.impl.StudentDaoImpl"/>
     <bean id="wykladowcaDao" class="pl.wwsis.SOS.dao.impl.WykladowcaDaoImpl"/>
