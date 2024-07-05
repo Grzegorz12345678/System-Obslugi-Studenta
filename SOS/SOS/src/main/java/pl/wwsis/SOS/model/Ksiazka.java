@@ -33,7 +33,6 @@ public class Ksiazka {
     private int rokWydania;
 
 
-
     public int getIdKsiazki() {
         return idKsiazki;
     }
