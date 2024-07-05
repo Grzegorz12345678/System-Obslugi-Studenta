@@ -94,8 +94,6 @@ CREATE TABLE Wypozyczenia (
 );
 
 
-
-
 CREATE TABLE Logi (
     idLogu INT PRIMARY KEY,
     idStudenta INT,
