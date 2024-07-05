@@ -4,7 +4,6 @@ CREATE TABLE Przedmiot (
     opisPrzedmiotu VARCHAR(255)
 );
 
-
 CREATE TABLE Plan_Zajec (
     idPlanu INT PRIMARY KEY,
     dataZajec DATE NOT NULL,
@@ -13,8 +12,6 @@ CREATE TABLE Plan_Zajec (
     idPrzedmiot INT,
     FOREIGN KEY (idPrzedmiot) REFERENCES Przedmiot(idPrzedmiot)
 );
-
-
 
 CREATE TABLE Wykladowca (
     idWykladowcy INT PRIMARY KEY,
@@ -53,8 +50,6 @@ CREATE TABLE Ocena (
     FOREIGN KEY (idWykladowcy) REFERENCES Wykladowca(idWykladowcy)
 );
 
-
-
 CREATE TABLE Zapis_na_Przedmiot (
     idZapisu INT PRIMARY KEY,
     idStudent INT,
@@ -63,13 +58,11 @@ CREATE TABLE Zapis_na_Przedmiot (
     FOREIGN KEY (idPrzedmiot) REFERENCES Przedmiot(idPrzedmiot)
 );
 
-
 CREATE TABLE Biblioteka (
     idBiblioteki INT PRIMARY KEY,
     nazwa VARCHAR(255) NOT NULL,
     adres VARCHAR(255) NOT NULL
 );
-
 
 CREATE TABLE Ksiazka (
     idKsiazki INT PRIMARY KEY,
@@ -81,7 +74,6 @@ CREATE TABLE Ksiazka (
     FOREIGN KEY (idBiblioteki) REFERENCES Biblioteka(idBiblioteki)
 );
 
-
 CREATE TABLE Wypozyczenia (
     idWypozyczenia INT PRIMARY KEY,
     idStudenta INT,
@@ -92,7 +84,6 @@ CREATE TABLE Wypozyczenia (
     FOREIGN KEY (idStudenta) REFERENCES Student(idStudenta),
     FOREIGN KEY (idKsiazki) REFERENCES Ksiazka(idKsiazki)
 );
-
 
 CREATE TABLE Logi (
     idLogu INT PRIMARY KEY,
