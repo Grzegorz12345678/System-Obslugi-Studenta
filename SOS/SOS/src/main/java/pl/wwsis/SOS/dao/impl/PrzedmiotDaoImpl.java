@@ -38,7 +38,6 @@ public class PrzedmiotDaoImpl implements PrzedmiotDao {
         entityManager.merge(przedmiot);
     }
 
-
     @Override
     public void usunPrzedmiot(int idPrzedmiotu) {
         Przedmiot przedmiot = entityManager.find(Przedmiot.class, idPrzedmiotu);
