@@ -19,7 +19,7 @@ public class PrzedmiotDaoImpl implements PrzedmiotDao {
 
     @Override
     public List<Przedmiot> pobierzWszystkiePrzedmioty() {
-        Query query = entityManager.createQuery("SELECT p FROM Przedmiot p");
+        Query query = entityManager.createQuery("SELECT p FROM Przedmiot p ");
         return query.getResultList();
     }
 
