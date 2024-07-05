@@ -61,5 +61,3 @@ INSERT INTO Powiadomienia (idPowiadomien, idStudenta, dataCzas, tytul, tresc) VA
 
 
 
-
-
