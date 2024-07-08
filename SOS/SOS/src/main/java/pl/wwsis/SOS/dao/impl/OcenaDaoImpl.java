@@ -21,7 +21,9 @@ public class OcenaDaoImpl implements OcenaDao {
 
     @Override
     public void dodajOcene(int idStudenta, int idPrzedmiotu, Ocena ocena) {
-
+        ocena.setIdStudenta(idStudenta);
+        ocena.setIdPrzedmiotu(idPrzedmiotu);
+        entityManager.persist(ocena);
     }
 
     @Override
