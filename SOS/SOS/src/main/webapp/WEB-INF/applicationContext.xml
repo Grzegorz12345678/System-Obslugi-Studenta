@@ -64,6 +64,7 @@
 
     <bean id="platnosciDao" class="pl.wwsis.SOS.dao.impl.PlatnosciDaoImpl"/>
 
+    <bean id="salaDao" class="pl.wwsis.SOS.dao.impl.SalaDaoImpl"/>
 
 
 
