@@ -26,13 +26,21 @@ public class OcenaDaoImpl implements OcenaDao {
         entityManager.persist(ocena);
     }
 
+
     @Override
     public void edytujOcene(int idOceny, Ocena nowaOcena) {
-
+        Ocena ocena = entityManager.find(Ocena.class, idOceny);
+        if (ocena != null) {
+            ocena.setOcena(nowaOcena.getOcena());
+            entityManager.merge(ocena);
+        }
     }
 
     @Override
     public void usunOcene(int idOceny) {
-
+        Ocena ocena = entityManager.find(Ocena.class, idOceny);
+        if (ocena != null) {
+            entityManager.remove(ocena);
+        }
     }
 }
