@@ -39,6 +39,11 @@ public class KontoDaoImpl implements KontoDao {
     }
 
     @Override
+    public void wyloguj() {
+
+    }
+
+    @Override
     public void zmienHaslo(String stareHaslo, String noweHaslo) {
         TypedQuery<Konto> query = entityManager.createQuery("SELECT k FROM Konto k WHERE k.haslo = :stareHaslo AND k.aktywne = true", Konto.class);
         query.setParameter("stareHaslo", stareHaslo);
@@ -61,6 +66,11 @@ public class KontoDaoImpl implements KontoDao {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void przypomnijHaslo(String login) {
+
     }
 
     @Override

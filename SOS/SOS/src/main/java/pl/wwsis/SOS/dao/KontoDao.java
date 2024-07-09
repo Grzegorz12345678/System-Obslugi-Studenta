@@ -7,7 +7,7 @@ public interface KontoDao {
     void zmienHaslo(String stareHaslo, String noweHaslo);
     boolean edytujProfil(String imie, String nazwisko, String email, String haslo);
     void przypomnijHaslo(String login);
-    void usunKonto();
-    void zablokujKonto();
+    void usunKonto(int idKonta);
+    void zablokujKonto(int idKonta);
     boolean jestZablokowane(String login);
 }
