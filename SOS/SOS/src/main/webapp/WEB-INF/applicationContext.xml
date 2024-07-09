@@ -72,6 +72,7 @@
 
     <bean id="zapisDaoImpl" class="pl.wwsis.SOS.dao.impl.ZapisDaoImpl"/>
 
+    <bean id="wypozyczenieDaoImpl" class="pl.wwsis.SOS.dao.impl.WypozyczenieDaoImpl"/>
 
 
 
