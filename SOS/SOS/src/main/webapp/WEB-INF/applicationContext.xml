@@ -68,6 +68,7 @@
 
     <bean id="sesjaUzytkownikaDao" class="pl.wwsis.SOS.dao.impl.SesjaUzytkownikaDaoImpl"/>
 
+    <bean id="wypozyczenieDao" class="pl.wwsis.SOS.dao.impl.WypozyczenieDaoImpl"/>
 
 
 
