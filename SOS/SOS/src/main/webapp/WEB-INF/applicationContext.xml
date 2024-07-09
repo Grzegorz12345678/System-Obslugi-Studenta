@@ -62,6 +62,7 @@
 
     <bean id="ocenaDao" class="pl.wwsis.SOS.dao.impl.OcenaDaoImpl"/>
 
+    <bean id="platnosciDao" class="pl.wwsis.SOS.dao.impl.PlatnosciDaoImpl"/>
 
 
 
