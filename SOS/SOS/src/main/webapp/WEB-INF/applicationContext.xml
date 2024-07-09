@@ -60,6 +60,24 @@
 
     <bean id="ksiazkaDao" class="pl.wwsis.SOS.dao.impl.KsiazkaDaoImpl"/>
 
+    <bean id="ocenaDao" class="pl.wwsis.SOS.dao.impl.OcenaDaoImpl"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
     </bean>
