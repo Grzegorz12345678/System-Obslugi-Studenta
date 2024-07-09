@@ -70,6 +70,7 @@
 
     <bean id="zajeciaDao" class="pl.wwsis.SOS.dao.impl.ZajeciaDaoImpl"/>
 
+    <bean id="zapisDaoImpl" class="pl.wwsis.SOS.dao.impl.ZapisDaoImpl"/>
 
 
 
