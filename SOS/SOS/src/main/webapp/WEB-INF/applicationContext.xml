@@ -56,7 +56,9 @@
 
     <bean id="wykladowcaDao" class="pl.wwsis.SOS.dao.impl.WykladowcaDaoImpl"/>
 
-    <bean id="wykladowcaDao" class="pl.wwsis.SOS.dao.impl.KontoDaoImpl"/>
+    <bean id="kontoDao" class="pl.wwsis.SOS.dao.impl.KontoDaoImpl"/>
+
+    <bean id="ksiazkaDao" class="pl.wwsis.SOS.dao.impl.KsiazkaDaoImpl"/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
