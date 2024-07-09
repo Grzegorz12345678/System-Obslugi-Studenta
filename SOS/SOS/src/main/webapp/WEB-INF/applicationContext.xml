@@ -66,6 +66,7 @@
 
     <bean id="salaDao" class="pl.wwsis.SOS.dao.impl.SalaDaoImpl"/>
 
+    <bean id="sesjaUzytkownikaDao" class="pl.wwsis.SOS.dao.impl.SesjaUzytkownikaDaoImpl"/>
 
 
 
