@@ -1,6 +1,7 @@
 
 package pl.wwsis.SOS.dao.impl;
 
+import org.springframework.security.core.context.SecurityContextHolder;
 import pl.wwsis.SOS.dao.KontoDao;
 import pl.wwsis.SOS.model.Konto;
 import org.springframework.stereotype.Repository;
@@ -40,8 +41,7 @@ public class KontoDaoImpl implements KontoDao {
 
     @Override
     public void wyloguj() {
-        // Wylogowanie użytkownika poprzez Spring Security
-        SecurityContextHolde.clearContext();
+        SecurityContextHolder.clearContext();
     }
 
 
