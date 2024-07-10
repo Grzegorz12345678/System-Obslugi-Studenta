@@ -40,8 +40,10 @@ public class KontoDaoImpl implements KontoDao {
 
     @Override
     public void wyloguj() {
-
+        // Wylogowanie użytkownika poprzez Spring Security
+        SecurityContextHolde.clearContext();
     }
+
 
     @Override
     public void zmienHaslo(String stareHaslo, String noweHaslo) {
